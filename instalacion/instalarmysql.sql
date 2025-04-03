@@ -12,10 +12,10 @@ CREATE TABLE IF NOT EXISTS `alumnos` (
   );
 
 
-CREATE TABLE IF NOT EXISTS `materias` (
-  `idmateria` INT NOT NULL AUTO_INCREMENT,
-  `nombre_materia` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`idmateria`)
+CREATE TABLE IF NOT EXISTS `asignaturas` (
+  `idasig` INT NOT NULL AUTO_INCREMENT,
+  `nombre_asig` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`idasig`)
   );
   
 CREATE TABLE IF NOT EXISTS `profesores` (
@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS `profesores` (
   CREATE TABLE IF NOT EXISTS `calificaciones` (
   `idcalificacion` INT NOT NULL AUTO_INCREMENT,
   `idalumno` INT NOT NULL,
-  `idmateria` INT NOT NULL,
+  `idasig` INT NOT NULL,
   `idprofesor` INT NOT NULL,
   'calificacion' FLOAT NOT NULL,
   PRIMARY KEY (`idcalificaciones`)
